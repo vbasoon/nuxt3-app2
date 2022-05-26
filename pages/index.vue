@@ -2,7 +2,7 @@
   <div class="home px-4">
     <h1 class="text-center pt-3">Main Page</h1>
     <section class="section section-news border-blue">
-      {{ news.articles }}
+      {{ news.articles[0].title }}
     </section>
     <section class="section section-news-hot border-blue">
       section news-hot
@@ -29,14 +29,18 @@
 </template>
 
 <script setup>
-let news = [];
+/* const url =
+  "https://newsapi.org/v2/top-headlines?" +
+  "country=ua&" +
+  "apiKey=77ecb3d574ae41ddb93b7e13fdc4fba6"; */
 
 const url =
   "https://newsapi.org/v2/top-headlines?" +
   "country=ua&" +
   "apiKey=77ecb3d574ae41ddb93b7e13fdc4fba6";
-news = await fetch(url).then((r) => r.json());
-console.log(news.articles);
+
+const { data: news } = useFetch(url);
+//const { data: news } = await useAsyncData("articles", () => $fetch(url));
 </script>
 
 <style lang="scss">
