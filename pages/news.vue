@@ -1,5 +1,12 @@
 <template>
-  <div><h1>News</h1></div>
+  <div>
+    <div class="">
+      <h1>News</h1>
+      <div class="container flex">
+        <NewsGrid :articles="articles" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
