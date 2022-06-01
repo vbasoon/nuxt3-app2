@@ -17,6 +17,13 @@
   </section> -->
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  articles: {
+    type: Array,
+    required: true,
+  },
+});
+</script>
 
 <style lang="scss" scoped></style>
