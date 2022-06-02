@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="">
-      <h1>News</h1>
+      <h1>Blogs</h1>
       <div class="container flex">
         <NewsGrid :articles="articles" />
       </div>

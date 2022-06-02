@@ -10,6 +10,7 @@
           <img class="card__image" :src="article.urlToImage" alt="card-image" />
           <div class="mt-4">{{ article.author }}</div>
           <div>{{ article.title }}</div>
+          <div></div>
         </div>
       </div>
     </section>
@@ -29,7 +30,7 @@
       </div>
     </section> -->
 
-    <NewsHero />
+    <NewsHero v-bind="articles" />
 
     <section class="section section-news-hot border-blue">
       section news-hot

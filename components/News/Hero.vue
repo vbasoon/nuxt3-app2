@@ -3,7 +3,11 @@
     <div class="">
       <h1>News</h1>
     </div>
+    <section>
+      <img class="hero-image" :src="urlToImage" alt="" />
+    </section>
   </div>
+
   <!-- <section class="section section-hero relative">
     <img class="hero-image" :src="news.articles[0].urlToImage" alt="" />
     <div class="hero-content">
@@ -19,8 +23,8 @@
 
 <script setup>
 const props = defineProps({
-  articles: {
-    type: Array,
+  urlToImage: {
+    type: String,
     required: true,
   },
 });
